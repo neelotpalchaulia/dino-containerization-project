@@ -1,29 +1,205 @@
-# Dino-Game-Clone
-This is a **Clone of Dinosaur Game** that is a browser game Orginally developed by Google and built into the Google Chrome web browser.<br/> 
-The player guides a pixelated Tyrannosaurus rex across a side-scrolling landscape, avoiding obstacles to achieve a higher score.<br/> 
-The game was created by members of the Chrome UX team in 2014. 
+# 🦖 Dino Game – Containerized using Docker and Podman
 
-**Developer:** Google<br/>
-**Genres:** Endless runner, Browser game<br/>
-**Platform:** Web browser<br/>
-**Publisher:** Google<br/>
-**Initial release date:** September 2014<br/>
+This project demonstrates how to containerize a simple HTML/CSS/JS Dino Game using **Docker** and **Podman**, two powerful containerization platforms. The game replicates the classic Chrome offline dino game and runs entirely in the browser with no backend.
 
-![Dino-Game-Clone-Abinandh-MJ](https://user-images.githubusercontent.com/99226172/226126302-0f1cb56a-6f9a-48c1-b6c8-6bb530778c13.png)
+> ✅ This project is part of my DevOps and containerization learning journey and fulfills an academic assignment demonstrating skills in Docker, Podman, container builds, and GitHub documentation.
 
-# Developer Notes <br/>
-- Press the Spacebar to begin the game.The dinosaur will start running automatically.<br/>
-- Press the spacebar to make the dinosaur jump over the cactus.<br/>
-- Continue pressing the **spacebar** to jump over additional catcus that appear as you progress.<br/>
-- The game will get faster and more difficult as you advance, so be prepared to react quickly!<br/>
+---
+
+## 📚 Table of Contents
+
+- [🦖 Dino Game – Containerized using Docker and Podman](#-dino-game--containerized-using-docker-and-podman)
+  - [📚 Table of Contents](#-table-of-contents)
+  - [📌 Project Overview](#-project-overview)
+  - [🛠️ Tech Stack](#️-tech-stack)
+  - [📁 Folder Structure](#-folder-structure)
+  - [📥 Prerequisites](#-prerequisites)
+  - [⚙️ Step-by-Step Instructions](#️-step-by-step-instructions)
+    - [🔹 Docker](#-docker)
+      - [1. Create a Dockerfile](#1-create-a-dockerfile)
+      - [2. Build Docker Image](#2-build-docker-image)
+      - [3. Run Docker Container](#3-run-docker-container)
+    - [🔹 Podman](#-podman)
+      - [1. Open WSL/Podman Terminal](#1-open-wslpodman-terminal)
+      - [2. Build Podman Image](#2-build-podman-image)
+      - [3. Run Podman Container](#3-run-podman-container)
+  - [📸 Screenshots](#-screenshots)
+    - [Docker (`screenshots/docker/`)](#docker-screenshotsdocker)
+    - [Podman (`screenshots/podman/`)](#podman-screenshotspodman)
+  - [📘 What I Learned](#-what-i-learned)
+  - [🙋 About Me](#-about-me)
+
+---
+
+## 📌 Project Overview
+
+This project:
+- Clones the [Dino Game](https://github.com/AbinandhMJ/Dino-Game-Clone)
+- Adds a Dockerfile to containerize it with **Docker** and **Podman**
+- Runs the game in a browser via an Nginx web server
+- Includes organized screenshots of every major step
+- Documents the entire process in this markdown file
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose                    |
+|------------|-----------------------------|
+| HTML/CSS/JS | Frontend Dino Game         |
+| Docker      | Container platform (Platform 1) |
+| Podman      | Container platform (Platform 2) |
+| Nginx       | Static file web server     |
+| Git/GitHub  | Version control & hosting  |
+
+---
+
+## 📁 Folder Structure
+
+dino-containerization-project/
+├── Dockerfile
+├── index.html
+├── style.css
+├── script.js
+├── <other JS/CSS/assets>
+├── screenshots/
+│ ├── docker/
+│ │ ├── browser_output.png
+│ │ ├── build.png
+│ │ ├── docker_installation.png
+│ │ ├── run.png
+│ │ └── dockerfile_created.png
+│ ├── podman/
+│ │ ├── build_run.png
+│ │ ├── podman_browser.png
+│ │ └── podman_installation.png
+│ └── app_download.png
+└── README.md
 
 
-# Development <br/>
-The game was created by members of the Chrome UX team in 2014, which consisted of Sebastien Gabriel, Alan Bettes, and Edward Jung.<br/>
-Gabriel designed the player character, named the "Lonely T-Rex".During development, the game was given the codename "Project Bolan",<br/> in reference to Marc Bolan, the lead singer of the T. Rex band. The developers chose the dinosaur theme as a reference to the game's function,<br/> a joke that not having an internet connection is equivalent to living in the "prehistoric ages". The game was released in September 2014; initially, it did not work on older devices, so the code was updated and re-released in December of the same year.<br/> The pteranodons were added as obstacles with a browser update in 2015.<br/>
+---
 
-# Disclaimer <br/>
-- This game was not developed on the basis / motive to sell / to merchandise.<br/>
-- This was developed only for the **Entertainment Purposes**<br/>
+## 📥 Prerequisites
 
-[Click Here to Play](https://dinogameclone.netlify.app/)
+- [x] Docker Desktop installed
+- [x] Podman Desktop or WSL with Podman CLI
+- [x] Git installed
+- [x] VS Code or any code editor
+
+---
+
+## ⚙️ Step-by-Step Instructions
+
+---
+
+### 🔹 Docker
+
+#### 1. Create a Dockerfile
+
+```Dockerfile
+FROM nginx:alpine
+COPY . /usr/share/nginx/html
+```
+
+#### 2. Build Docker Image
+
+```PowerShell
+docker build -t dino-docker .
+```
+
+#### 3. Run Docker Container
+
+```PowerShell
+docker run -d -p 8080:80 dino-docker
+```
+
+- [x] Visit the game at http://localhost:8080
+
+---
+
+### 🔹 Podman
+
+#### 1. Open WSL/Podman Terminal
+- Make sure Podman CLI is accessible via your terminal.
+
+#### 2. Build Podman Image
+
+```PowerShell
+podman build -t dino-podman .
+```
+
+#### 3. Run Podman Container
+
+```PowerShell
+podman run -d -p 8081:80 dino-podman
+```
+
+- [x] Visit the game at http://localhost:8081
+
+---
+
+## 📸 Screenshots
+
+Screenshots of each stage are provided in the `screenshots/` directory.
+
+### Docker (`screenshots/docker/`)
+- Docker successfully installed ✅
+  
+  ![](./screenshots/docker/docker_installation.png)
+
+- Dockerfile added to project ✅
+  
+  ![](./screenshots/docker/dockerfile_created.png)
+
+- Image built using Docker ✅
+
+  ![](./screenshots/docker/build.png)
+
+- Game running in the browser via Docker container ✅
+
+  ![](./screenshots/docker/run.png)
+
+  ![](./screenshots/docker/browser_output.png)
+
+
+### Podman (`screenshots/podman/`)
+- Podman installed and working via terminal ✅
+
+  ![](./screenshots/podman/podman_installation.png)
+
+- The same Dockerfile that had been used earlier is being reused with Podman
+  
+- Podman image built and running successfully ✅
+
+  ![](./screenshots/podman/build_run.png)
+
+- Game accessible via browser on Podman container ✅
+
+  ![](./screenshots/podman/podman_browser.png)
+
+---
+
+## 📘 What I Learned
+
+Through this project, I gained hands-on experience with:
+
+- Writing a minimal **Dockerfile** using Nginx for serving static files
+- Building container images using both **Docker** and **Podman**
+- Running web applications inside containers and accessing them via browser
+- Using **PowerShell** and **Podman CLI** for container operations
+- Organizing screenshots and structuring a project repository for readability
+- Writing detailed documentation using Markdown for GitHub visibility
+
+This assignment helped me understand core DevOps workflows and how containerization simplifies application deployment across platforms.
+
+---
+
+## 🙋 About Me
+
+**Neelotpal**  
+🎓 Postgraduate Cloud Computing Student at Loyalist College, Toronto  
+🛠️ Cloud Intern | AZ-104 | DevOps & Containers Enthusiast  
+📫 [GitHub](https://github.com/neelotpal-cloud)  
+🔗 [LinkedIn](https://www.linkedin.com/in/neelotpal-cloud)
+
+> I created this project as part of a hands-on assignment to demonstrate my understanding of containerization using Docker and Podman. I hope this helps others who are starting their DevOps journey!
