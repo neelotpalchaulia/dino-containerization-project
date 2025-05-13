@@ -4,7 +4,6 @@ This project demonstrates how to containerize a simple HTML/CSS/JS Dino Game usi
 
 > ✅ This project is part of my DevOps and containerization learning journey and fulfills an academic assignment demonstrating skills in Docker, Podman, container builds, and GitHub documentation.
 
----
 
 ## 📚 Table of Contents
 
@@ -29,8 +28,6 @@ This project demonstrates how to containerize a simple HTML/CSS/JS Dino Game usi
   - [📘 What I Learned](#-what-i-learned)
   - [🙋 About Me](#-about-me)
 
----
-
 ## 📌 Project Overview
 
 This project:
@@ -39,8 +36,6 @@ This project:
 - Runs the game in a browser via an Nginx web server
 - Includes organized screenshots of every major step
 - Documents the entire process in this markdown file
-
----
 
 ## 🛠️ Tech Stack
 
@@ -52,10 +47,9 @@ This project:
 | Nginx       | Static file web server     |
 | Git/GitHub  | Version control & hosting  |
 
----
-
 ## 📁 Folder Structure
 
+```
 dino-containerization-project/
 ├── Dockerfile
 ├── index.html
@@ -75,9 +69,7 @@ dino-containerization-project/
 │ │ └── podman_installation.png
 │ └── app_download.png
 └── README.md
-
-
----
+```
 
 ## 📥 Prerequisites
 
@@ -86,11 +78,7 @@ dino-containerization-project/
 - [x] Git installed
 - [x] VS Code or any code editor
 
----
-
 ## ⚙️ Step-by-Step Instructions
-
----
 
 ### 🔹 Docker
 
@@ -136,8 +124,6 @@ podman run -d -p 8081:80 dino-podman
 
 - [x] Visit the game at http://localhost:8081
 
----
-
 ## 📸 Screenshots
 
 Screenshots of each stage are provided in the `screenshots/` directory.
@@ -177,8 +163,6 @@ Screenshots of each stage are provided in the `screenshots/` directory.
 
   ![](./screenshots/podman/podman_browser.png)
 
----
-
 ## 📘 What I Learned
 
 Through this project, I gained hands-on experience with:
@@ -192,14 +176,12 @@ Through this project, I gained hands-on experience with:
 
 This assignment helped me understand core DevOps workflows and how containerization simplifies application deployment across platforms.
 
----
-
 ## 🙋 About Me
 
 **Neelotpal**  
 🎓 Postgraduate Cloud Computing Student at Loyalist College, Toronto  
 🛠️ Cloud Intern | AZ-104 | DevOps & Containers Enthusiast  
-📫 [GitHub](https://github.com/neelotpal-cloud)  
-🔗 [LinkedIn](https://www.linkedin.com/in/neelotpal-cloud)
+📫 [GitHub](https://github.com/neelotpalchaulia)  
+🔗 [LinkedIn](www.linkedin.com/in/neelchaulia)
 
 > I created this project as part of a hands-on assignment to demonstrate my understanding of containerization using Docker and Podman. I hope this helps others who are starting their DevOps journey!
