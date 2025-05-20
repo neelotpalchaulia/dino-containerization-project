@@ -182,6 +182,6 @@ This assignment helped me understand core DevOps workflows and how containerizat
 🎓 Postgraduate Cloud Computing Student at Loyalist College, Toronto  
 🛠️ Cloud Intern | AZ-104 | DevOps & Containers Enthusiast  
 📫 [GitHub](https://github.com/neelotpalchaulia)  
-🔗 [LinkedIn](www.linkedin.com/in/neelchaulia)
+🔗 [LinkedIn](https://www.linkedin.com/in/neelchaulia)
 
 > I created this project as part of a hands-on assignment to demonstrate my understanding of containerization using Docker and Podman. I hope this helps others who are starting their DevOps journey!
